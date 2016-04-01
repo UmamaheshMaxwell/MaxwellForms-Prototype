@@ -1,13 +1,33 @@
 var hellosign = require('hellosign-sdk')({key: 'c98f09c4617ff75700ed68abe46ab5d4cd4fa7a1cc63feb33c1af25707a75fc5'});
 
 // Basic Authentication
-
 hellosign.account.get()
     .then(function(response){
-    	console.log('Basic Authentication Succeded');
-        console.log(response);
+    	console.log('\n Succesfully communicated with HelloSign !!!! \n');
+        console.log(" Account Id :" + response.account.account_id);
+        console.log(" Emails Address :" + response.account.email_address);
+        console.log(" Callback Url :" + response.account.callback_url);
+        console.log(" Statuc Code :" + response.statusCode);
+        console.log(" Status Message :" + response.statusMessage);
+
     })
     .catch(function(err){
         //catch error
+        console.log(err);
     });
 
+
+// Get the list of templates
+hellosign.template.list()
+    .then(function(response){
+        //parse response
+        console.log("\n Gets the list of templates !!\n");
+
+        for(var i= 0; i<response.templates.length; i++){
+        	console.log(" Template Id_"+i + " is " + response.templates[i].template_id)
+        }
+    })
+    .catch(function(err){
+        //catch error
+        console.log(err);
+    });
