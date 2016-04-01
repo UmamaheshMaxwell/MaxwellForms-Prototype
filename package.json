@@ -1,0 +1,24 @@
+{
+  "name": "maxwellforms-prototype",
+  "version": "1.0.0",
+  "description": "The goal of this prototype will be to successfully code the new forms encode &amp; upload workflow",
+  "main": "server.js",
+  "dependencies": {
+    "hellosign-sdk": "^1.1.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UmamaheshMaxwell/MaxwellForms-Prototype.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UmamaheshMaxwell/MaxwellForms-Prototype/issues"
+  },
+  "homepage": "https://github.com/UmamaheshMaxwell/MaxwellForms-Prototype#readme"
+}
