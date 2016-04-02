@@ -1,4 +1,5 @@
-var hellosign = require('hellosign-sdk')({key: 'c98f09c4617ff75700ed68abe46ab5d4cd4fa7a1cc63feb33c1af25707a75fc5'});
+var config = require('./config/config.js')
+var hellosign = require('hellosign-sdk')({key: config.HELLOSIGN_APIKEY});
 
 // Basic Authentication
 hellosign.account.get()
@@ -9,7 +10,6 @@ hellosign.account.get()
         console.log(" Callback Url :" + response.account.callback_url);
         console.log(" Statuc Code :" + response.statusCode);
         console.log(" Status Message :" + response.statusMessage);
-
     })
     .catch(function(err){
         //catch error
