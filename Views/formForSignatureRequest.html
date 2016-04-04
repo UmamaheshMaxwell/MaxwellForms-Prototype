@@ -1,0 +1,15 @@
+<script type="text/javascript" src="https://s3.amazonaws.com/cdn.hellosign.com/1.20.15/js/embedded.js"></script>
+<div>
+<script type="text/javascript">
+    HelloSign.init("449be5c26a934956ef9f128c1a58cf25");
+    HelloSign.open({
+        url: "https://www.hellosign.com/editor/embeddedSign?signature_id=af5f5f368a875e10798eb7b2d1846cff&token=9d57a84a01e9c29ec76494a425bb1d1f",     
+        allowCancel: true,
+        skipDomainVerification: true,
+        debug: true,
+        messageListener: function(eventData) {
+            alert("HelloSign event received");
+        }    
+    });
+</script>
+</div>
